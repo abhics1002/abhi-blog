@@ -1,0 +1,87 @@
+baseURL = "https://abhics1002.github.io/"
+languageCode = "en"
+defaultContentLanguage = "en"
+title = "Abhi blogs"
+theme = "LoveIt"
+
+[params]
+  version = "0.2.X"
+  description = "Notes on software engineering, distributed systems, and infrastructure."
+  keywords = ["software engineering", "distributed systems", "scalability"]
+  defaultTheme = "auto"        # auto, light, dark
+  gitRepo = ""
+  fingerprint = ""
+  dateFormat = "January 2, 2006"
+
+  [params.header]
+    desktopMode = "fixed"
+    mobileMode = "auto"
+    [params.header.title]
+      name = "Abhishek's Blog"
+      pre = ""
+      post = ""
+      typeit = false
+
+  [params.footer]
+    enable = true
+    copyright = true
+    author = true
+    since = 2025
+
+  [params.home]
+    rss = 10
+    [params.home.profile]
+      enable = true
+      avatarURL = "/images/avatar.jpg"
+      title = "Abhishek"
+      subtitle = "Staff SWE · Writing about infra, scalable systems, and engineering craft"
+      typeit = true
+      social = true
+
+  [params.social]
+    GitHub = "abhics1002"
+    Linkedin = "abbharadwaj"
+    Email = "svits.abhishek@email.com"
+
+  [params.page]
+    lightgallery = false
+    [params.page.toc]
+      enable = true          # table of contents on posts
+      keepStatic = false
+      auto = true
+    [params.page.code]
+      copy = true            # copy button on code blocks — great for dev blogs!
+      maxShownLines = 50
+    [params.page.math]
+      enable = false
+
+  [params.search]
+    enable = true
+    type = "lunr"            # built-in search, no external service needed
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 2
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+[markup]
+  [markup.highlight]
+    noClasses = false        # proper syntax highlighting for code
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true          # allows HTML in markdown when needed
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]   # JSON needed for search to work
