@@ -85,3 +85,7 @@ theme = "LoveIt"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]   # JSON needed for search to work
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
