@@ -1,13 +1,11 @@
 ---
-title: "SERVICE DISCOVERY PLATFORMS — PART 1"
+title: "Service Discovery in the Age of Microservices"
 date: 2026-03-09
 draft: false
 tags: ["service discovery", "distributed-systems", "cloud-native", "Kubernetes", "Istio", "Consul", "xDS", "platform engineering"]
 categories: ["Infrastructure"]
 description: "introduction to service discovery"
 ---
-
-# Service Discovery in the Age of Microservices
 *A no-fluff introduction for engineers who've felt this pain firsthand*
 
 ---
