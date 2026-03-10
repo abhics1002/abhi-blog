@@ -4,13 +4,11 @@ date: 2026-03-09
 draft: false
 tags: ["service discovery", "distributed-systems", "cloud-native", "Kubernetes", "Istio", "Consul", "xDS", "platform engineering"]
 categories: ["Infrastructure"]
-description: "A quick intro to what this blog is about."
+description: "introduction to service discovery"
 ---
 
 # Service Discovery in the Age of Microservices
 *A no-fluff introduction for engineers who've felt this pain firsthand*
-
-March 2026 · ~14 min read · Part 1 of 6
 
 ---
 
@@ -274,5 +272,3 @@ In Part 2, we'll get concrete: what exactly is a service registry, how does heal
 **→ Continue to Part 2: Core Concepts & Architecture Patterns**
 
 ---
-
-*Tags: microservices · service discovery · distributed systems · cloud-native · Kubernetes · Istio · Consul · xDS · platform engineering*
