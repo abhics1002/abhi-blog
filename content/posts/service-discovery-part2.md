@@ -5,6 +5,7 @@ draft: false
 tags: ["service discovery", "distributed-systems", "cloud-native", "xDS", "platform engineering", "CAP theorem"]
 categories: ["Infrastructure"]
 description: "introduction to service discovery"
+author: abhishek
 ---
 
 > **SERVICE DISCOVERY PLATFORMS — PART 2 OF 6**
