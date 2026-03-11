@@ -1,5 +1,5 @@
 ---
-title: "Service Discovery in the Age of Microservices"
+title: "Core Concepts: The Building Blocks of Service Discovery"
 date: 2026-03-10
 draft: false
 tags: ["service discovery", "distributed-systems", "cloud-native", "xDS", "platform engineering", "CAP theorem"]
