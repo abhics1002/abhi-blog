@@ -5,6 +5,7 @@ draft: false
 tags: ["service discovery", "distributed-systems", "cloud-native", "Kubernetes", "Istio", "Consul", "xDS", "platform engineering"]
 categories: ["Infrastructure"]
 description: "introduction to service discovery"
+author: abhishek
 ---
 *A no-fluff introduction for engineers who've felt this pain firsthand*
 
