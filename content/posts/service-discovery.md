@@ -1,6 +1,6 @@
 ---
 title: "Service Discovery in the Age of Microservices"
-date: 2026-03-09
+date: 2026-03-08
 draft: false
 tags: ["service discovery", "distributed-systems", "cloud-native", "Kubernetes", "Istio", "Consul", "xDS", "platform engineering"]
 categories: ["Infrastructure"]
