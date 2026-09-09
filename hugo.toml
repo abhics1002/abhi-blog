@@ -54,6 +54,34 @@ theme = "LoveIt"
       maxShownLines = 50
     [params.page.math]
       enable = false
+    [params.page.share]
+      enable = true
+      X = true
+      Linkedin = true
+      HackerNews = true
+      Facebook = true
+      Threads = false
+      Whatsapp = false
+      Pinterest = false
+      Tumblr = false
+      Reddit = false
+      VK = false
+      Buffer = false
+      Xing = false
+      Line = false
+      Instapaper = false
+      Pocket = false
+      Flipboard = false
+      Weibo = false
+      Blogger = false
+      Baidu = false
+      Odnoklassniki = false
+      Evernote = false
+      Skype = false
+      Trello = false
+      Diaspora = false
+      Mix = false
+      Telegram = false
 
   [params.search]
     enable = true

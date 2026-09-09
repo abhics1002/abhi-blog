@@ -7,9 +7,6 @@ categories: ["Infrastructure"]
 description: "introduction to service discovery"
 author: abhishek
 ---
-*A no-fluff introduction for engineers who've felt this pain firsthand*
-
----
 
 Let's skip the preamble about how microservices are everywhere. If you're reading this, you already know. You've probably also already hit the moment where you realized that having 50 (or 500) services is the easy part — making them reliably find and talk to each other is where things get interesting.
 

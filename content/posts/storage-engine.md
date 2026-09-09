@@ -7,7 +7,6 @@ categories: ["Infrastructure"]
 description: "introduction to database storage engine"
 author: abhishek
 ---
-# Relational Database Storage Engines 
 
 The key insight going into this topic is that a "storage engine" is the component responsible for *how data is physically laid out on disk, how it's indexed, and how reads and writes are served*. Everything above it — SQL parsing, query planning, transactions — sits on top and is largely engine-agnostic. Understanding what's underneath these abstractions is what separates engineers who just accept defaults from those who can make informed architectural decisions.
 
