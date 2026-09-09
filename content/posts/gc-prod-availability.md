@@ -1,13 +1,13 @@
 ---
 title: "When Garbage Collection Becomes an Availability Incident"
-date: 2026-09-07
+date: 2026-06-07
 draft: false
 tags: ["performance"]
 categories: ["Infrastructure"]
 description: "When Garbage Collection Becomes an Availability Incident"
+author: abhishek
 ---
 
-# When Garbage Collection Becomes an Availability Incident
 
 We tend to think of garbage collection as a background chore — the JVM quietly tidying up after itself while our service does the real work. Most of the time that's true. But push enough allocation pressure through a service, and GC stops being invisible plumbing and starts being the thing that decides whether your service stays up.
 
@@ -35,9 +35,9 @@ Two things made this worse than ordinary GC pressure:
 
 What made this more than a one-line JVM flag fix was that it was a feedback loop cutting across every layer of the stack at once: more GC time meant less time serving requests, which meant more backlog, which meant more allocation pressure. An unoptimized query layer underneath the service kept feeding it oversized result sets. The service was quietly redoing the same allocation work for duplicate data on every request. A memory-heavy JSON serialization framework sat in the hot path. Page sizes on the (still unpaginated) APIs were unbounded. Underneath all of it, memory fragmentation was occasionally getting the process OOM-killed in a way that looked, at first glance, unrelated to GC entirely. And the service was still running an older JDK version, which meant real GC and latency improvements were sitting on the table, unclaimed. None of these were individually exotic — what made the incident real was that they all compounded at the same time, right as the data volume the service had to hold jumped by an order of magnitude.
 
-<img src="01_data_growth.png" width="600" alt="Chart showing dataset size jumping from 17K to 207K records">
+{{< image src="/images/posts/gc-prod-availability/01_data_growth.png" alt="Chart showing dataset size jumping from 17K to 207K records" width="600" >}}
 
-<img src="05_humongous_object.png" width="700" alt="Diagram of humongous object allocation bypassing young generation and landing directly in old generation, forcing a mixed GC pass">
+{{< image src="/images/posts/gc-prod-availability/05_humongous_object.png" alt="Diagram of humongous object allocation bypassing young generation and landing directly in old generation, forcing a mixed GC pass" width="700" >}}
 
 ## Diagnosis before treatment
 
@@ -77,7 +77,7 @@ The more durable fix was to reduce how much garbage the service produced per req
 6. **Switched the OS-level memory allocator.** The service was occasionally getting OOM-killed by the container runtime even though heap usage looked fine — the actual cause was memory fragmentation from a high allocation/deallocation churn rate. Switching allocators resolved it.
 7. **Upgraded the JDK**, first as a minor-version bump that resolved a known SSL-related issue, and later as a full migration to a newer major version. The JDK upgrade alone measured out to double-digit percentage improvements in GC pause time and call latency (more on that below).
 
-<img src="04_allocation_reduction.png" width="650" alt="Chart showing cumulative allocation rate reduction across each optimization">
+{{< image src="/images/posts/gc-prod-availability/04_allocation_reduction.png" alt="Chart showing cumulative allocation rate reduction across each optimization" width="650" >}}
 
 ## Results
 
@@ -88,9 +88,9 @@ Across a few months of rollout, the combined effect across both tracks was subst
 - **GC health score during peak load improved from roughly 10 to over 90** (on a 0–100 internal scoring metric).
 - Post-JDK-upgrade measurements alone showed **~24% reduction in total GC pause time**, **~12% reduction in max GC pause duration**, **~12% reduction in call latency (p90)**, and **~42% reduction in call latency (p99)** on the busiest instances.
 
-<img src="02_gc_overload_trend.png" width="650" alt="Chart showing GC overload trigger count trending to zero over the rollout period">
+{{< image src="/images/posts/gc-prod-availability/02_gc_overload_trend.png" alt="Chart showing GC overload trigger count trending to zero over the rollout period" width="650" >}}
 
-<img src="03_gc_score.png" width="600" alt="Chart showing GC health score improving from 10 to 92 during peak load">
+{{< image src="/images/posts/gc-prod-availability/03_gc_score.png" alt="Chart showing GC health score improving from 10 to 92 during peak load" width="600" >}}
 
 ## Recommendations for GC improvements
 
