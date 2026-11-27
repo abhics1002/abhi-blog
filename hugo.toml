@@ -1,15 +1,24 @@
 baseURL = "https://abhics1002.github.io/abhi-blog/"
 languageCode = "en"
 defaultContentLanguage = "en"
-title = "Abhi blogs"
+title = "Abhishek Bharadwaj"
 theme = "LoveIt"
 
 [params]
   version = "0.2.X"
-  description = "Notes on software engineering, distributed systems, and infrastructure."
-  keywords = ["software engineering", "distributed systems", "scalability"]
+  description = "Engineering distributed systems at scale. Practical notes on cloud infrastructure, performance engineering, reliability, and system design."
+  keywords = [
+    "Abhishek Bharadwaj",
+    "distributed systems",
+    "cloud infrastructure",
+    "Kubernetes",
+    "performance engineering",
+    "system design",
+    "site reliability",
+    "scalability"
+  ]
   defaultTheme = "auto"        # auto, light, dark
-  gitRepo = ""
+  gitRepo = "https://github.com/abhics1002/abhi-blog"
   fingerprint = ""
   dateFormat = "January 2, 2006"
 
@@ -17,7 +26,7 @@ theme = "LoveIt"
     desktopMode = "fixed"
     mobileMode = "auto"
     [params.header.title]
-      name = "Abhishek's Blog"
+      name = "Abhishek Bharadwaj"
       pre = ""
       post = ""
       typeit = false
@@ -33,9 +42,9 @@ theme = "LoveIt"
     [params.home.profile]
       enable = true
       avatarURL = "/images/avatar.jpg"
-      title = "Abhishek"
-      subtitle = "Staff SWE · Writing about infra, scalable systems, and engineering craft"
-      typeit = true
+      title = "Abhishek Bharadwaj"
+      subtitle = "Building and operating distributed systems at scale. Writing about cloud infrastructure, performance, reliability, and engineering."
+      typeit = false
       social = true
 
   [params.social]
