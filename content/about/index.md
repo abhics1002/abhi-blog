@@ -6,7 +6,7 @@ draft: false
 
 Hey, I'm Abhishek — a Staff Software Engineer focused on infrastructure, distributed systems, and the engineering craft that keeps large-scale systems running reliably.
 
-I started this blog to write about things I find genuinely interesting. 
+I started this blog to write about things I find genuinely interesting.
 
 # What you'll find here
 
@@ -21,6 +21,5 @@ I've spent my career building and operating systems at scale — working across 
 
 # Get in touch
 
-- GitHub: [abhics1002](https://github.com/abhics1002)
 - LinkedIn: [abbharadwaj](https://linkedin.com/in/abbharadwaj)
 - Email: svits.abhishek@gmail.com
