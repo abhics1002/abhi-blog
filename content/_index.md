@@ -7,7 +7,7 @@ I’m a software engineer focused on distributed systems and infrastructure. I�
 
 I write about **distributed systems, cloud infrastructure, performance engineering, and reliability**. Connect with me on [LinkedIn](https://www.linkedin.com/in/abbharadwaj/).
 
-## Writing
+**Writing**
 
 - **[When Garbage Collection Becomes an Availability Incident](https://abhics1002.github.io/abhi-blog/posts/gc-prod-availability/)** · June 7, 2026  
   How allocation pressure and dataset growth can turn garbage collection into a production reliability problem.
