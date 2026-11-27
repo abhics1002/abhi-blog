@@ -45,4 +45,4 @@ I write about **distributed systems, cloud infrastructure, performance engineeri
   <div style="grid-column:1 / -1; opacity:0.85;">An introduction to service discovery and the evolution from static configuration to dynamic service meshes.</div>
 </div>
 
-[All writing →](https://abhics1002.github.io/abhi-blog/posts/)
+<a href="/abhi-blog/posts/">All writing →</a>
