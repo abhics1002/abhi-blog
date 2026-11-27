@@ -17,7 +17,7 @@ theme = "LoveIt"
     "site reliability",
     "scalability"
   ]
-  defaultTheme = "auto"        # auto, light, dark
+  defaultTheme = "auto"
   gitRepo = "https://github.com/abhics1002/abhi-blog"
   fingerprint = ""
   dateFormat = "January 2, 2006"
@@ -40,26 +40,23 @@ theme = "LoveIt"
   [params.home]
     rss = 10
     [params.home.profile]
-      enable = true
-      avatarURL = "/images/avatar.jpg"
-      title = "Abhishek Bharadwaj"
-      subtitle = "Building and operating distributed systems at scale. Writing about cloud infrastructure, performance, reliability, and engineering."
-      typeit = false
-      social = true
+      enable = false
+    [params.home.posts]
+      enable = false
 
   [params.social]
     GitHub = "abhics1002"
     Linkedin = "abbharadwaj"
-    Email = "svits.abhishek@email.com"
+    Email = "svits.abhishek@gmail.com"
 
   [params.page]
     lightgallery = false
     [params.page.toc]
-      enable = true          # table of contents on posts
+      enable = true
       keepStatic = false
       auto = true
     [params.page.code]
-      copy = true            # copy button on code blocks — great for dev blogs!
+      copy = true
       maxShownLines = 50
     [params.page.math]
       enable = false
@@ -94,7 +91,7 @@ theme = "LoveIt"
 
   [params.search]
     enable = true
-    type = "lunr"            # built-in search, no external service needed
+    type = "lunr"
 
 [menu]
   [[menu.main]]
@@ -115,13 +112,13 @@ theme = "LoveIt"
 
 [markup]
   [markup.highlight]
-    noClasses = false        # proper syntax highlighting for code
+    noClasses = false
   [markup.goldmark]
     [markup.goldmark.renderer]
-      unsafe = true          # allows HTML in markdown when needed
+      unsafe = true
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]   # JSON needed for search to work
+  home = ["HTML", "RSS", "JSON"]
 
 [caches]
   [caches.images]
